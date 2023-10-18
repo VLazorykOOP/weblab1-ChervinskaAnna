@@ -1,0 +1,807 @@
+#main-content {
+    color: blue;
+    font-size: 18px;
+}
+
+.container>p {
+    color: blue;
+}
+
+.child>p {
+    color: red;
+}
+
+/* Стилі для всіх елементів з класом "parent" */
+.parent {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Стилі для <p> елементів, які є дочірніми елементами елементів з класом "parent" */
+.parent p {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Стилі для елементів з атрибутом data-color */
+[p][data-color] {
+    color: red;
+    font-weight: bold;
+}
+
+/* Стилі для елементів з атрибутом data-role="header" */
+[data-role="header"] {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+/* Стилі для елементів з класами, що починаються з "prefix-" */
+[class^="prefix-"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* Стилі для елементів з класами, що містять слово "word" */
+[class*="word"] {
+    color: blue;
+    font-style: italic;
+}
+
+.parent p:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+/* Стилі для усіх включених (активних) елементів форми */
+:enabled {
+    border: 2px solid green;
+    padding: 5px;
+}
+
+/* Стилі для включених (активних) кнопок */
+:enabled[type="submit"] {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+:empty {
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px;
+}
+
+:empty {
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Стилі для останнього параграфа всередині .parent */
+.parent p:last-of-type {
+    color: red;
+    font-weight: bold;
+}
+
+/* Стилі для активного стану посилань */
+a:active {
+    color: red;
+}
+
+/* Стилі для активного стану кнопок */
+button:active {
+    background-color: yellow;
+}
+
+#myElement {
+    background-color: blue;
+    padding: 10px;
+}
+
+/* Стилі для елементів з атрибутом data-color="red" */
+[data-color="red"] {
+    color: red;
+}
+
+/* Стилі для елементів з атрибутом data-role="header" */
+[data-role="header"] {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+/* p::first-line {
+    font-weight: bold;
+    font-size: 120%;
+    color: blue;
+} */
+
+/* Додавання контенту до початку параграфу */
+p::before {
+    content: "🌟 ";
+    /* Додавання іконки перед текстом */
+    font-weight: bold;
+    color: green;
+}
+
+/* Додавання контенту до початку блока div */
+/* div::before {
+    content: "Important: ";
+    font-style: italic;
+    color: red;
+} */
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+/* Відступи для першого блоку */
+#block1 {
+    margin: 10px;
+}
+
+/* Відступи для другого блоку */
+#block2 {
+    margin: 20px;
+}
+
+/* Відступи для третього блоку */
+#block3 {
+    margin: 15px 10px;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+/* Відступи для першого блоку в 10% відносно батьківського елемента */
+#block4 {
+    margin: 10%;
+}
+
+/* Відступи для другого блоку в 20% відносно батьківського елемента */
+#block5 {
+    margin: 20%;
+}
+
+/* Відступи для третього блоку в 15% по вертикалі і 10% по горизонталі відносно батьківського елемента */
+#block6 {
+    margin: 15% 10%;
+}
+
+/* Стилі для елемента з класом example */
+.example {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: 50px;
+    /* Встановлення лівого зовнішнього відступу в 50 пікселів */
+}
+
+.examplee {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: 20%;
+    /* Встановлення лівого зовнішнього відступу в 20% від ширини батьківського елемента */
+}
+
+/* Стилі для елемента з класом example */
+.exampleee {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 30px;
+    /* Встановлення верхнього зовнішнього відступу в 30 пікселів */
+}
+
+.example2 {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 15%;
+    /* Встановлення верхнього зовнішнього відступу в 15% від висоти батьківського елемента */
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    padding: 20px;
+    /* Встановлення внутрішнього відступу всередині блоку */
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    padding-left: 30px;
+    /* Встановлення лівого внутрішнього відступу */
+}
+
+.box3 {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    padding-bottom: 20px;
+    /* Встановлення нижнього внутрішнього відступу */
+}
+
+/* Стилі для елемента з класом box */
+.box4 {
+    width: 200px;
+    height: 100px;
+    border: thin solid black;
+    /* Встановлення тонкої чорної межі */
+}
+
+.box5 {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    /* Встановлення межі товщиною 2 пікселя */
+}
+
+.box6 {
+    width: 200px;
+    height: 100px;
+    border-top: thin solid black;
+    /* Встановлення тонкої чорної верхньої межі */
+}
+
+.box7 {
+    width: 200px;
+    height: 100px;
+    border-top: 4px solid black;
+    /* Встановлення верхньої межі товщиною 4 пікселі */
+}
+
+.box8 {
+    width: 200px;
+    height: 100px;
+    border-bottom: thin solid black;
+    /* Встановлення тонкої чорної нижньої межі */
+}
+
+.box9 {
+    width: 200px;
+    height: 100px;
+    border-bottom: 3px solid black;
+    /* Встановлення нижньої межі товщиною 3 пікселі */
+}
+
+.box10 {
+    width: 200px;
+    height: 100px;
+    border-right: 2px solid red;
+    /* Встановлення правої межі товщиною 2 пікселі та червоного кольору */
+}
+
+.box11 {
+    width: 200px;
+    height: 100px;
+    border-left: 2px solid blue;
+    /* Встановлення лівої межі товщиною 2 пікселі та синього кольору */
+}
+
+.box12 {
+    width: 200px;
+    height: 100px;
+    border-top: 2px solid green;
+    /* Встановлення верхньої межі товщиною 2 пікселі та зеленого кольору */
+}
+
+.box13 {
+    width: 200px;
+    height: 100px;
+    border-bottom: 2px solid black;
+    /* Загальні стилі межі */
+    border-bottom-style: none;
+    /* Встановлення стилю для нижньої межі в none */
+}
+
+.box14 {
+    width: 200px;
+    height: 100px;
+    border-bottom: 4px double black;
+    /* Встановлення нижньої межі товщиною 4 пікселі та стилю double */
+}
+
+.box15 {
+    width: 200px;
+    height: 100px;
+    border-bottom: 2px solid black;
+    /* Встановлення нижньої межі товщиною 2 пікселі та стилю solid (за замовчуванням) */
+    border-bottom-style: hidden;
+    /* Приховання стилю нижньої межі */
+}
+
+.box16 {
+    width: 200px;
+    height: 100px;
+    border-bottom: 4px groove black;
+    /* Встановлення нижньої межі товщиною 4 пікселі та стилю groove */
+}
+
+.box17 {
+    width: 200px;
+    height: 100px;
+    border-right: 2px solid black;
+    /* Встановлення правої межі товщиною 2 пікселі та стилю solid (за замовчуванням) */
+    border-right-style: none;
+    /* Приховання стилю правої межі */
+}
+
+.box18 {
+    width: 200px;
+    height: 100px;
+    border-top: 4px double black;
+    /* Встановлення верхньої межі товщиною 4 пікселі та стилю double */
+}
+
+.box19 {
+    width: 200px;
+    height: 100px;
+    border-top: 2px solid black;
+    /* Встановлення верхньої межі товщиною 2 пікселі та стилю solid (за замовчуванням) */
+    border-top-style: hidden;
+    /* Приховання стилю верхньої межі */
+}
+
+.box20 {
+    width: 200px;
+    height: 100px;
+    border-top: 4px groove black;
+    /* Встановлення верхньої межі товщиною 4 пікселі та стилю groove */
+}
+
+.box21 {
+    display: inline;
+    /* Зробити блок інлайновим */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.box22 {
+    display: inline;
+    /* Зробити блок інлайновим */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.hidden-box {
+    display: none;
+    /* Зробити елемент невидимим */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.cell1 {
+    display: table-cell;
+    /* Зробити блок як ячейку таблиці */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.cell2 {
+    display: table-cell;
+    /* Зробити блок як ячейку таблиці */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.inline-table1 {
+    display: inline-table;
+    /* Зробити елемент як вбудована таблиця */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.inline-table2 {
+    display: inline-table;
+    /* Зробити елемент як вбудована таблиця */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.block1 {
+    display: block;
+    /* Зробити елемент блоковим */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.block2 {
+    display: block;
+    /* Зробити елемент блоковим */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.row-group1 {
+    display: table-row-group;
+    /* Зробити елемент групою рядків в таблиці */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.row-group2 {
+    display: table-row-group;
+    /* Зробити елемент групою рядків в таблиці */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.static1 {
+    position: static;
+    /* Зробити елемент позиціонованим статично */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.static2 {
+    position: static;
+    /* Зробити елемент позиціонованим статично */
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.fixed-box {
+    position: fixed;
+    /* Зробити елемент фіксованим */
+    top: 20px;
+    /* Змістити від верхнього краю на 20px */
+    left: 20px;
+    /* Змістити від лівого краю на 20px */
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.box23 {
+    position: relative;
+    z-index: auto;
+    /* Значення за замовчуванням */
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box24 {
+    position: relative;
+    z-index: auto;
+    /* Значення за замовчуванням */
+    background-color: #dcdcdc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.box25 {
+    position: relative;
+    z-index: auto;
+    /* Значення за замовчуванням */
+    background-color: #c0c0c0;
+    padding: 10px;
+}
+
+.float-left1 {
+    float: left;
+    /* Вирівнювання до лівого краю */
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    /* Додатковий зазор справа для інших елементів */
+}
+
+.float-left2 {
+    float: left;
+    /* Вирівнювання до лівого краю */
+    width: 100px;
+    height: 100px;
+    background-color: #dcdcdc;
+    margin-right: 10px;
+    /* Додатковий зазор справа для інших елементів */
+}
+
+.float-left3 {
+    float: left;
+    /* Вирівнювання до лівого краю */
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    /* Додатковий зазор справа для інших елементів */
+}
+
+.float-left4 {
+    float: left;
+    /* Вирівнювання до лівого краю */
+    width: 100px;
+    height: 100px;
+    background-color: #dcdcdc;
+    margin-right: 10px;
+    /* Додатковий зазор справа для інших елементів */
+}
+
+/* Стилі для елемента з класом no-float */
+.no-float {
+    float: none;
+    /* Змінити назад до звичайного потоку */
+    background-color: #a0a0a0;
+    height: 100px;
+}
+
+.float-left5 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.clear-none1 {
+    clear: none;
+    /* Елемент не виходить з-під впливу плаваючих елементів */
+    background-color: #dcdcdc;
+    height: 100px;
+}
+
+/* Стилі для елементів з класами float-left та clear-left */
+.float-left6 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+.clear-left2 {
+    clear: left;
+    /* Елемент виходить з-під впливу ліворуч плаваючих елементів */
+    background-color: #dcdcdc;
+    height: 100px;
+}
+
+.ltr-text {
+    direction: ltr;
+    /* Встановити ліворуч напрямок тексту */
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.normal-text {
+    unicode-bidi: normal;
+    /* Застосувати стандартний напрямок тексту */
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.bidi-override-text {
+    unicode-bidi: bidi-override;
+    /* Використовувати визначення напрямку тексту з самого тексту */
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+}
+
+/* Стилі для елемента з класом min-height-example */
+.min-height-example {
+    min-height: 200px;
+    /* Мінімальна висота 200px */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Стилі для елемента з класом min-height-percent-example */
+.min-height-percent-example {
+    min-height: 50%;
+    /* Мінімальна висота 50% від батьківського контейнера */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.max-height-example {
+    max-height: 100px;
+    /* Максимальна висота 100px */
+    overflow: hidden;
+    /* Приховати зайвий контент, якщо висота перевищена */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.normal-line-height {
+    line-height: normal;
+    /* Використовувати нормальний line-height */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.custom-line-height {
+    line-height: 1.5;
+    /* Висота рядка - 1.5 раза від розміру шрифту */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.baseline-example {
+    font-size: 18px;
+    line-height: 2;
+    /* Збільшити висоту рядка для візуальності */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.baseline-child {
+    vertical-align: baseline;
+    /* Вирівнювання вздовж базової лінії тексту */
+    font-size: 24px;
+    /* Збільшення розміру шрифту для візуальності */
+}
+
+.bottom-example {
+    font-size: 18px;
+    line-height: 2;
+    /* Збільшити висоту рядка для візуальності */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.bottom-child {
+    vertical-align: bottom;
+    /* Вирівнювання за нижнім краєм */
+    font-size: 24px;
+    /* Збільшення розміру шрифту для візуальності */
+}
+
+.text-top-example {
+    font-size: 18px;
+    line-height: 2;
+    /* Збільшити висоту рядка для візуальності */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.text-top-child {
+    vertical-align: text-top;
+    /* Вирівнювання за верхнім краєм тексту */
+    font-size: 24px;
+    /* Збільшення розміру шрифту для візуальності */
+}
+
+.visible-overflow {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow: visible;
+    /* Вміст може виходити за межі області контенту */
+}
+
+/* Стилі для дочірнього елемента з класом overflow-content */
+.overflow-content {
+    background-color: #f0f0f0;
+    margin-left: 50px;
+    /* Зміщення вправо для видимості видимого вмісту */
+}
+
+.scroll-overflow {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow: scroll;
+    /* Додати полоси прокрутки, якщо вміст виходить за межі */
+}
+
+/* Стилі для дочірнього елемента з класом overflow-content */
+.overflow-content {
+    width: 300px;
+    /* Зробити ширший вміст, щоб викликати появу полос прокрутки */
+}
+
+.clipped-element {
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    position: relative;
+    clip: rect(20px, 180px, 130px, 20px);
+    /* Вказати область відображення */
+}
+
+.visible-element {
+    visibility: visible;
+    /* Елемент видимий */
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.hidden-element {
+    visibility: hidden;
+}
+
+.outlined-element {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    outline: 2px solid #e74c3c;
+    /* Контур шириною 2px, червоного кольору */
+}
+
+.colored-text {
+    color: red;
+    /* Назва кольору */
+    /* або */
+    color: rgb(255, 0, 0);
+    /* RGB-код для червоного кольору */
+}
+
+.colored-background {
+    background-color: #3498db;
+    /* HEX-код для синього кольору */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-with-image {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    /* Замість 'шлях_до_зображення.jpg' вставте фактичний шлях або URI до зображення */
+    background-size: cover;
+    /* Підганяє розмір зображення, щоб воно повністю покривало фон */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-position-example {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    /* Горизонтально в центрі, вертикально внизу */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-attachment-example {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-size: cover;
+    background-attachment: scroll;
+    /* Фонове зображення буде прокручуватися разом зі сторінкою */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-position-example {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    /* Горизонтально в центрі, вертикально внизу */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-position-example {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    /* Горизонтально в центрі, вертикально внизу */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
+
+.background-position-example {
+    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-size: cover;
+    background-position: center top;
+    /* Горизонтально в центрі, вертикально вгорі */
+    color: #ffffff;
+    /* Колір тексту - білий */
+}
