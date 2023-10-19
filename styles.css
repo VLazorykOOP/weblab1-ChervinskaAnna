@@ -43,7 +43,12 @@
 
 /* Стилі для елементів з класами, що містять слово "word" */
 [class*="word"] {
-    color: blue;
+    color: green;
+    font-style: italic;
+}
+
+[class*="poem"] {
+    color: red;
     font-style: italic;
 }
 
@@ -63,13 +68,6 @@
     background-color: green;
     color: white;
     cursor: pointer;
-}
-
-:empty {
-    background-color: lightgray;
-    border: 1px solid gray;
-    padding: 10px;
-    margin: 5px;
 }
 
 :empty {
@@ -118,12 +116,11 @@ button:active {
 } */
 
 /* Додавання контенту до початку параграфу */
-p::before {
+/* p::before {
     content: "🌟 ";
-    /* Додавання іконки перед текстом */
     font-weight: bold;
     color: green;
-}
+} */
 
 /* Додавання контенту до початку блока div */
 /* div::before {
@@ -155,8 +152,8 @@ p::before {
 }
 
 .block {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
     border: 1px solid black;
     display: inline-block;
 }
@@ -458,7 +455,7 @@ p::before {
     /* Зробити елемент фіксованим */
     top: 20px;
     /* Змістити від верхнього краю на 20px */
-    left: 20px;
+    right: 20px;
     /* Змістити від лівого краю на 20px */
     border: 2px solid black;
     padding: 10px;
