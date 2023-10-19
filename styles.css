@@ -90,7 +90,7 @@ a:active {
 
 /* Стилі для активного стану кнопок */
 button:active {
-    background-color: yellow;
+    background-color: lightblue;
 }
 
 #myElement {
@@ -152,7 +152,7 @@ button:active {
 }
 
 .block {
-    width: 170px;
+    width: 130px;
     height: 170px;
     border: 1px solid black;
     display: inline-block;
@@ -160,17 +160,17 @@ button:active {
 
 /* Відступи для першого блоку в 10% відносно батьківського елемента */
 #block4 {
-    margin: 10%;
+    margin: 5%;
 }
 
 /* Відступи для другого блоку в 20% відносно батьківського елемента */
 #block5 {
-    margin: 20%;
+    margin: 10%;
 }
 
 /* Відступи для третього блоку в 15% по вертикалі і 10% по горизонталі відносно батьківського елемента */
 #block6 {
-    margin: 15% 10%;
+    margin: 7% 8%;
 }
 
 /* Стилі для елемента з класом example */
@@ -183,11 +183,10 @@ button:active {
 }
 
 .examplee {
-    width: 200px;
-    height: 100px;
+    width: 280px;
+    height: 50px;
     background-color: lightblue;
-    margin-left: 20%;
-    /* Встановлення лівого зовнішнього відступу в 20% від ширини батьківського елемента */
+    right: 20%;
 }
 
 /* Стилі для елемента з класом example */
@@ -275,16 +274,16 @@ button:active {
 }
 
 .box10 {
-    width: 200px;
-    height: 100px;
-    border-right: 2px solid red;
+    width: 250px;
+    height: 25px;
+    border-right: 2px solid black;
     /* Встановлення правої межі товщиною 2 пікселі та червоного кольору */
 }
 
 .box11 {
-    width: 200px;
-    height: 100px;
-    border-left: 2px solid blue;
+    width: 250px;
+    height: 25px;
+    border-left: 2px solid yellow;
     /* Встановлення лівої межі товщиною 2 пікселі та синього кольору */
 }
 
@@ -750,7 +749,7 @@ button:active {
 }
 
 .background-with-image {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     /* Замість 'шлях_до_зображення.jpg' вставте фактичний шлях або URI до зображення */
     background-size: cover;
     /* Підганяє розмір зображення, щоб воно повністю покривало фон */
@@ -759,7 +758,7 @@ button:active {
 }
 
 .background-position-example {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     background-size: cover;
     background-position: center bottom;
     /* Горизонтально в центрі, вертикально внизу */
@@ -768,7 +767,7 @@ button:active {
 }
 
 .background-attachment-example {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     background-size: cover;
     background-attachment: scroll;
     /* Фонове зображення буде прокручуватися разом зі сторінкою */
@@ -777,7 +776,7 @@ button:active {
 }
 
 .background-position-example {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     background-size: cover;
     background-position: center bottom;
     /* Горизонтально в центрі, вертикально внизу */
@@ -786,7 +785,7 @@ button:active {
 }
 
 .background-position-example {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     background-size: cover;
     background-position: center bottom;
     /* Горизонтально в центрі, вертикально внизу */
@@ -795,7 +794,7 @@ button:active {
 }
 
 .background-position-example {
-    background-image: url('photo_2023-09-08_12-22-37.jpg');
+    background-image: url('download.jpg');
     background-size: cover;
     background-position: center top;
     /* Горизонтально в центрі, вертикально вгорі */
