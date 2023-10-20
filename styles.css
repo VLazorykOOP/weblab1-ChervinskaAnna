@@ -1,3 +1,39 @@
+ul {
+    color: red;
+    /* Колір тексту */
+}
+
+ol {
+    color: green;
+    /* Колір тексту */
+}
+
+li {
+    color: lightskyblue;
+    /* Колір тексту */
+}
+
+/* Стилізація для класу "main-nav" */
+.main-nav {
+    background-color: lightcoral;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Стилізація для класу "moving-text" */
+.moving-text {
+    color: black;
+    font-size: 18px;
+}
+
+#mainContent {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+
 #main-content {
     color: blue;
     font-size: 18px;

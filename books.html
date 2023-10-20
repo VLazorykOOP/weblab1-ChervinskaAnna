@@ -16,14 +16,24 @@
 </head>
 
 <body>
+
+    <marquee title="Рухаючийся текст" height="50" scrolldelay="100" hspace="20" class="moving-text">
+        meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
+        meow meow meow meow meow meow
+    </marquee>
+
     <div class="fixed-box"> Only for cats!!</div>
     <div id="header">
         <h1>HISTORY</h1>
     </div>
-    <a href="secret.html">SECRET PAGE</a><br>
-    <a href="books.html"> BOOKS PAGE</a><br>
-    <a href="documents.html">DOCUMENT PAGE</a><br>
-    <a href="zvit.html">ZVIT PAGE</a>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="secret.html">SECRET PAGE</a></li>
+            <li><a href="books.html"> BOOKS PAGE</a></li>
+            <li><a href="documents.html">DOCUMENT PAGE</a></li>
+            <li><a href="zvit.html">ZVIT PAGE</a></li>
+        </ul>
+    </nav>
 
     <p><abbr title="WANTED!!">Dangerous criminal:</abbr></p>
     <p dir="ltr">Nickname:Mr Cat </p>
@@ -33,6 +43,14 @@
     <div class="box10">
         <h3>We know that he wrote such books:</h3>
     </div>
+
+    <ul>
+        <!-- Тег <li> з атрибутом id -->
+        <li id="item1">dangerous dangerous dangerous dangerous dangerous dangerous dangerous</li>
+
+        <!-- Інший елемент списку з атрибутом id -->
+        <li id="item2">dangerous dangerous dangerous dangerous dangerous dangerous dangerous</li>
+    </ul>
 
     <div id="block4" class="block">
         <img src="img/halereya_kotiv_01.jpg" alt="Mr Cat" width="100" height="130">
@@ -80,12 +98,36 @@
             meow meow meow meow meow meow meow meow meow meow</p>
     </div>
 
+    <dl id="descriptionList">
+        <!-- Тег <dt> визначає термін -->
+        <dt>Offender:</dt>
+
+        <!-- Тег <dd> визначає опис терміна -->
+        <dd id="descriptionTerm" title="Додатковий опис терміна">a person who commits an illegal act or a person or
+            thing that does something wrong or causes problems</dd>
+    </dl>
 
     <h3> We also know his last words after the crime </h3>
     <blockquote>
         <p> Meeeeeeeeeeeeow meow meow meow meow meow meow meow meow.</p>
         <cite> Mr Cat</cite>
     </blockquote>
+
+    <main id="mainContent">
+        <h1>Mister Cat's love story</h1>
+        <p>meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
+            meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
+            meow meow meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
+            meow meow meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow<br>
+            meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
+            meow meow</p>
+    </main>
+
 
     <address>
         <p>Author: Ms Button</p>
