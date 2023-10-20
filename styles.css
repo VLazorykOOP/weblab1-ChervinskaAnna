@@ -37,7 +37,18 @@
 
 /* Стилі для елементів з класами, що починаються з "prefix-" */
 [class^="prefix-"] {
-    color: green;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Стилі для елементів з класами, що починаються з "prefix-" */
+[class^="bla-"] {
+    color: black;
+    font-weight: bold;
+}
+
+[class^="whi-"] {
+    color: grey;
     font-weight: bold;
 }
 
@@ -175,24 +186,24 @@ button:active {
 
 /* Стилі для елемента з класом example */
 .example {
-    width: 200px;
-    height: 100px;
-    background-color: lightblue;
-    margin-left: 50px;
+    width: 1000px;
+    height: 80px;
+    background-color: whitesmoke;
+    right: 20%;
     /* Встановлення лівого зовнішнього відступу в 50 пікселів */
 }
 
 .examplee {
-    width: 280px;
-    height: 50px;
-    background-color: lightblue;
+    width: 1000px;
+    height: 80px;
+    background-color: grey;
     right: 20%;
 }
 
 /* Стилі для елемента з класом example */
 .exampleee {
-    width: 200px;
-    height: 100px;
+    width: 1000px;
+    height: 80px;
     background-color: lightblue;
     margin-top: 30px;
     /* Встановлення верхнього зовнішнього відступу в 30 пікселів */
@@ -283,7 +294,7 @@ button:active {
 .box11 {
     width: 250px;
     height: 25px;
-    border-left: 2px solid yellow;
+    border-left: 2px solid greenyellow;
     /* Встановлення лівої межі товщиною 2 пікселі та синього кольору */
 }
 
@@ -489,9 +500,9 @@ button:active {
 .float-left1 {
     float: left;
     /* Вирівнювання до лівого краю */
-    width: 100px;
-    height: 100px;
-    background-color: #f0f0f0;
+    width: 230px;
+    height: 180px;
+    background-color: lightskyblue;
     margin-right: 10px;
     /* Додатковий зазор справа для інших елементів */
 }
@@ -499,9 +510,9 @@ button:active {
 .float-left2 {
     float: left;
     /* Вирівнювання до лівого краю */
-    width: 100px;
-    height: 100px;
-    background-color: #dcdcdc;
+    width: 230px;
+    height: 180px;
+    background-color: lightsalmon;
     margin-right: 10px;
     /* Додатковий зазор справа для інших елементів */
 }
@@ -509,9 +520,9 @@ button:active {
 .float-left3 {
     float: left;
     /* Вирівнювання до лівого краю */
-    width: 100px;
-    height: 100px;
-    background-color: #f0f0f0;
+    width: 230px;
+    height: 180px;
+    background-color: lightseagreen;
     margin-right: 10px;
     /* Додатковий зазор справа для інших елементів */
 }
@@ -519,9 +530,9 @@ button:active {
 .float-left4 {
     float: left;
     /* Вирівнювання до лівого краю */
-    width: 100px;
-    height: 100px;
-    background-color: #dcdcdc;
+    width: 230px;
+    height: 180px;
+    background-color: lightslategray;
     margin-right: 10px;
     /* Додатковий зазор справа для інших елементів */
 }
@@ -690,8 +701,8 @@ button:active {
 }
 
 .scroll-overflow {
-    width: 200px;
-    height: 100px;
+    width: 700px;
+    height: 150px;
     border: 1px solid #ccc;
     padding: 20px;
     overflow: scroll;
@@ -749,7 +760,7 @@ button:active {
 }
 
 .background-with-image {
-    background-image: url('download.jpg');
+    background-image: url('img/kotyky.jpg');
     /* Замість 'шлях_до_зображення.jpg' вставте фактичний шлях або URI до зображення */
     background-size: cover;
     /* Підганяє розмір зображення, щоб воно повністю покривало фон */
@@ -767,7 +778,7 @@ button:active {
 }
 
 .background-attachment-example {
-    background-image: url('download.jpg');
+    background-image: url('img/kotyky.jpg');
     background-size: cover;
     background-attachment: scroll;
     /* Фонове зображення буде прокручуватися разом зі сторінкою */
