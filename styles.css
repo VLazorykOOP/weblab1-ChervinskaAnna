@@ -33,6 +33,48 @@ li {
 }
 
 
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 80%;
+}
+
+td,
+th {
+    border: 2px solid #150101;
+    padding: 3px;
+    text-align: center;
+    width: 50px;
+}
+
+table col {
+    width: 50px;
+}
+
+.first-cell {
+    width: 20px;
+    height: 30px;
+    border: 10px solid black;
+}
+
+.SF-cell {
+    width: 20px;
+    height: 10px;
+    border: 3px solid;
+}
+
+.Six-cell {
+    width: 20px;
+    height: 10px;
+    border: 3px solid;
+}
+
+.large-cell {
+    width: 150px;
+    border: 10px solid black;
+}
+
+
 
 #main-content {
     color: blue;
