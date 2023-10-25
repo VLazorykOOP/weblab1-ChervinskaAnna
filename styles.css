@@ -32,12 +32,12 @@ li {
     border: 1px solid #ccc;
 }
 
-
+/* 
 table {
     border-collapse: collapse;
     border: 2px solid black;
     width: 80%;
-}
+} */
 
 td,
 th {
@@ -51,30 +51,10 @@ table col {
     width: 50px;
 }
 
-.first-cell {
-    width: 20px;
-    height: 30px;
-    border: 10px solid black;
+.caption-class {
+    font-size: 18px;
+    color: grey;
 }
-
-.SF-cell {
-    width: 20px;
-    height: 10px;
-    border: 3px solid;
-}
-
-.Six-cell {
-    width: 20px;
-    height: 10px;
-    border: 3px solid;
-}
-
-.large-cell {
-    width: 150px;
-    border: 10px solid black;
-}
-
-
 
 #main-content {
     color: blue;
