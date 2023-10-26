@@ -13,14 +13,396 @@
 
     <!-- Підключення значка сайту (favicon) -->
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <style>
+        body {
+            size: portrait;
+            marks: cross;
+            page-break-before: always;
+            page: auto;
+            orphans: 2;
+            widows: 2;
+        }
 
+        /* text-transform: capitalize */
+        h1 {
+            text-transform: capitalize;
+        }
+
+        /* text-align: right */
+        p.right-align {
+            text-align: right;
+        }
+
+        /* text-indent: <процент> */
+        p.indented {
+            text-indent: 20%;
+        }
+
+        /* white-space: pre */
+        pre {
+            white-space: pre;
+        }
+
+        /* word-spacing: <розмір> */
+        p.word-spacing {
+            word-spacing: 10px;
+        }
+
+        /* size: portrait */
+        @page {
+            size: portrait;
+        }
+
+        /* marks: cross */
+        @page {
+            marks: cross;
+        }
+
+        /* page-break-before: always */
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* page: auto */
+        @page {
+            page: auto;
+        }
+
+        /* orphans: <ціле> */
+        @page {
+            orphans: 2;
+            /* You can set your desired number */
+        }
+
+        /* widows: <ціле> */
+        @page {
+            widows: 2;
+            /* You can set your desired number */
+        }
+    </style>
 </head>
 
 <body>
+    <!-- <form class="my-form" method="post" action="secret.html" lang="en" style="background-color: #f4f4f4;" novalidate>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+
+        <input type="submit" value="Отправить">
+    </form> -->
+
+    <p class="azimuth-right">This text has azimuth set to right.</p>
+    <p class="azimuth-behind">This text has azimuth set to behind.</p>
+    <p class="elevation-below">This text has elevation set to below.</p>
+    <p class="slower">This text has a slower speech rate.</p>
+    <p class="slow">This text has a slow speech rate.</p>
+    <p class="voice-settings">This text has customized voice settings.</p>
+    <p class="speak-spell-out">This text will be spoken with spell-out.</p>
+    <p class="speak-numeral">12345</p>
+
+
+    <audio controls autoplay>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio class="loud" controls>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio class="cued" controls>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio class="paused" controls>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio class="multi-cue" controls>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio class="cue-after" controls>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <h1>Content before page break</h1>
+    <div class="page-break"></div>
+    <h1>Content after page break</h1>
+
+
+    <h1>заголовок с text-transform: capitalize</h1>
+    <p class="right-align">Текст с text-align: right</p>
+    <p class="indented">Текст с text-indent: 20%</p>
+    <pre>
+      Текст с white-space: pre
+      С новой строки
+      И еще одна строка
+    </pre>
+    <p class="word-spacing">Текст с word-spacing: 10px между словами</p>
+
+
+    <form action="LAB4.html" method="post" enctype="multipart/form-data">
+
+        <!-- Ввод числового значения с шагом -->
+        <label for="numericInput" class="custom-input">Число с шагом:</label>
+        <input type="number" id="numericInput" name="numericInput" class="custom-input" step="0.5" max="10" min="0">
+
+        <!-- Ввод текста с минимальной длиной -->
+        <label for="textInput" class="custom-input">Текст (мин. длина 5 символов):</label>
+        <input type="text" id="textInput" name="textInput" class="custom-input" minlength="5">
+
+        <!-- Ввод текста с указанием языка -->
+        <label for="langInput" class="custom-input">Текст с языковым атрибутом:</label>
+        <input type="text" id="langInput" name="langInput" class="custom-input" lang="en">
+
+        <!-- Ввод числового значения с указанием высоты -->
+        <label for="heightInput" class="custom-input">Число с указанием высоты:</label>
+        <input type="number" id="heightInput" name="heightInput" class="custom-input" height="100">
+
+        <!-- Ввод значения с указанием цели формы -->
+        <label for="formtargetInput" class="custom-input">Значение с указанием цели формы:</label>
+        <input type="text" id="formtargetInput" name="formtargetInput" class="custom-input" formtarget="_blank">
+
+        <!-- Ввод значения с указанием направления текста -->
+        <label for="dirnameInput" class="custom-input">Значение с указанием направления текста:</label>
+        <input type="text" id="dirnameInput" name="dirnameInput" class="custom-input" dirname="rtl">
+
+        <!-- Ввод числового значения с максимальным значением -->
+        <label for="maxInput" class="custom-input">Число с максимальным значением:</label>
+        <input type="number" id="maxInput" name="maxInput" class="custom-input" max="100">
+
+        <!-- Ввод значения с указанием действия формы -->
+        <label for="formactionInput" class="custom-input">Значение с указанием действия формы:</label>
+        <input type="text" id="formactionInput" name="formactionInput" class="custom-input" formaction="/custom-action">
+
+        <!-- Ввод текста с максимальной длиной -->
+        <label for="maxlengthInput" class="custom-input">Текст (макс. длина 10 символов):</label>
+        <input type="text" id="maxlengthInput" name="maxlengthInput" class="custom-input" maxlength="10">
+
+        <!-- Отключенный ввод -->
+        <label for="disabledInput" class="custom-input">Отключенный ввод:</label>
+        <input type="text" id="disabledInput" name="disabledInput" class="custom-input" disabled>
+
+        <!-- Ввод значения по умолчанию -->
+        <label for="valueInput" class="custom-input">Значение по умолчанию:</label>
+        <input type="text" id="valueInput" name="valueInput" class="custom-input" value="Значение">
+
+        <!-- Ввод значения с указанием типа кодирования формы -->
+        <label for="formenctypeInput" class="custom-input">Значение с указанием типа кодирования формы:</label>
+        <input type="text" id="formenctypeInput" name="formenctypeInput" class="custom-input"
+            formenctype="multipart/form-data">
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить</button>
+
+    </form>
+
+
+
+    <form action="LAB4.html" method="post" enctype="multipart/form-data">
+
+        <!-- Тип button -->
+        <input type="button" value="Нажми меня" class="custom-input">
+
+        <!-- Тип email -->
+        <label for="emailInput" class="custom-input">Email:</label>
+        <input type="email" id="emailInput" name="emailInput" class="custom-input" required>
+
+        <!-- Тип datetime-local -->
+        <!-- <label for="datetimeInput" class="custom-input">Дата и время:</label>
+        <input type="datetime-local" id="datetimeInput" name="datetimeInput" class="custom-input"> -->
+
+        <!-- Тип range -->
+        <label for="rangeInput" class="custom-input">Диапазон (от 0 до 100):</label>
+        <input type="range" id="rangeInput" name="rangeInput" class="custom-input" min="0" max="100">
+
+        <!-- Тип number -->
+        <label for="numberInput" class="custom-input">Число:</label>
+        <input type="number" id="numberInput" name="numberInput" class="custom-input">
+
+        <!-- Тип tel -->
+        <label for="telInput" class="custom-input">Телефон:</label>
+        <input type="tel" id="telInput" name="telInput" class="custom-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890">
+
+        <!-- Тип date -->
+        <label for="dateInput" class="custom-input">Дата:</label>
+        <input type="date" id="dateInput" name="dateInput" class="custom-input">
+
+        <!-- Тип color -->
+        <label for="colorInput" class="custom-input">Цвет:</label>
+        <input type="color" id="colorInput" name="colorInput" class="custom-input">
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить</button>
+
+    </form>
+
+    <form action="LAB4.html" method="post">
+
+        <!-- Текстовая область с обязательным заполнением -->
+        <label for="messageTextarea" class="custom-textarea">Сообщение:</label>
+        <textarea id="messageTextarea" name="messageTextarea" rows="4" cols="50" class="custom-textarea" required
+            maxlength="200"></textarea>
+
+        <!-- Текстовая область с указанием формы -->
+        <label for="feedbackTextarea" class="custom-textarea">Обратная связь:</label>
+        <textarea id="feedbackTextarea" name="feedbackTextarea" rows="6" cols="30" class="custom-textarea"
+            form="feedbackForm"></textarea>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить</button>
+
+    </form>
+
+    <form action="LAB4.html" method="post" enctype="multipart/form-data">
+
+        <!-- Кнопка с указанием типа кодирования формы -->
+        <button type="submit" class="custom-button" formenctype="multipart/form-data">Отправить с файлами</button>
+
+        <!-- Отключенная кнопка -->
+        <button type="button" class="custom-button" disabled>Неактивная кнопка</button>
+
+        <!-- Кнопка с автоматическим фокусом -->
+        <button type="submit" class="custom-button" autofocus>Кнопка с фокусом</button>
+
+        <!-- Кнопка с указанием действия формы -->
+        <button type="submit" class="custom-button" formaction="/custom-action">Другое действие</button>
+
+    </form>
+
+
+    <form action="LAB4.html" method="post">
+
+        <!-- Использование тега label с атрибутами -->
+        <label for="username" id="usernameLabel" style="color: blue;" dir="rtl" class="custom-label">Имя
+            пользователя:</label>
+        <input type="text" id="username" name="username" aria-labelledby="usernameLabel">
+
+        <!-- Другой пример тега label с атрибутами -->
+        <label for="email" id="emailLabel" style="font-weight: bold;" dir="ltr" class="custom-label">Email:</label>
+        <input type="email" id="email" name="email" aria-labelledby="emailLabel">
+
+    </form>
+
+
+    <form action="/submit" method="post">
+
+        <!-- Использование тега optgroup с атрибутами -->
+        <label for="cars">Выберите автомобиль:</label>
+        <select id="cars" name="cars" class="custom-select" style="width: 200px;" lang="en">
+            <optgroup label="Японские автомобили" class="optgroup-style">
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="nissan">Nissan</option>
+            </optgroup>
+            <optgroup label="Европейские автомобили" class="optgroup-style">
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+                <option value="mercedes">Mercedes-Benz</option>
+            </optgroup>
+        </select>
+
+    </form>
+
+
+    <form action="/submit" method="post">
+
+        <!-- Использование тега option с атрибутами -->
+        <label for="fruit">Выберите фрукт:</label>
+        <select id="fruit" name="fruit" class="custom-select" lang="en">
+            <option value="apple" selected lang="en">Яблоко</option>
+            <option value="banana" lang="en">Банан</option>
+            <option value="orange" lang="en" disabled>Апельсин (недоступен)</option>
+            <option value="grape" lang="en">Виноград</option>
+        </select>
+
+    </form>
+
+
+    <form action="/submit" method="post">
+
+        <!-- Использование тега keygen с атрибутами (устаревший) -->
+        <keygen name="public-key" challenge="random_challenge" keytype="RSA" dir="rtl" class="custom-keygen" autofocus
+            style="color: green;"></keygen>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить</button>
+
+    </form>
+
+
+    <!-- Использование тега details с атрибутами -->
+    <details class="custom-details" lang="en">
+        <summary title="Развернуть/свернуть">Дополнительные детали</summary>
+        <p>Содержимое дополнительных деталей здесь...</p>
+    </details>
+
+
+    <!-- Использование тега meter с атрибутами -->
+    <meter class="custom-meter" style="width: 200px;" id="diskSpace" value="60" min="0" max="100"
+        optimum="80">60%</meter>
+
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <label for="a">Введите число a:</label>
+        <input type="range" id="a" name="a" value="50"> <span id="a_output">50</span><br>
+
+        <label for="b">Введите число b:</label>
+        <input type="number" id="b" name="b" value="50"> <br>
+
+        <!-- Использование тега output с атрибутами -->
+        <output for="a b" class="custom-output" name="result" style="font-weight: bold;"
+            title="Результат сложения">100</output>
+    </form>
+
+    <h1>Текст с font-weight: 900</h1>
+    <h2>Текст с font-weight: 700</h2>
+    <p class="adjusted">Текст с font-size-adjust: 0.5</p>
+    <p class="sized">Текст с font-size: 24px</p>
+    <p class="captioned">Текст с font: caption</p>
+    <p class="smallcaps">Текст с font-variant: small-caps</p>
+    <p class="normal">Текст с font-style: normal</p>
+    <p class="extra-expanded">Текст с font-stretch: extra-expanded</p>
+    <p class="expanded">Текст с font-stretch: expanded</p>
+    <p class="semi-condensed">Текст с font-stretch: semi-condensed</p>
+
+    <!-- 
+<form class="custom-form" method="post" action="success.html" lang="en" novalidate>
+    <h2>Пример формы</h2>
+
+    <label for="username">Имя:</label>
+    <input type="text" id="username" name="username" required>
+    <span class="error">* Обязательное поле</span>
+    <br>
+
+ 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error">* Введите корректный email</span>
+    <br>
+
+    <button type="submit">Отправить</button>
+</form> -->
+
+    <!-- 
+<body>
     <table>
-        <caption>Таблиця приклад. <b> <i>Товарчик </i></b> </caption>
-        <thead id=tbht>
-            <tr>
+        <caption>Таблиця приклад. <b> <i>Товарчик </i></b> </caption> -->
+    <!-- <thead id=tbht> -->
+    <!-- <tr>
                 <th rowspan=3>№</th>
                 <th rowspan=3>Магазинчик</th>
                 <th rowspan=3>Гастрономчик</th>
@@ -139,25 +521,25 @@
                 <td>497</td>
                 <td>3</td>
                 <td>8</td>
-            </tr>
+            </tr> -->
 
-            <!-- Тег <dl> -->
-            <dl>
-                <!-- Тег <dt> з атрибутами title та lang -->
-                <dt title="Термін для пояснення" lang="en">HTML</dt>
+    <!-- Тег <dl> -->
+    <dl>
+        <!-- Тег <dt> з атрибутами title та lang -->
+        <!-- <dt title="Термін для пояснення" lang="en">HTML</dt> -->
 
-                <!-- Тег <dd> визначає опис терміна -->
-                <dd>Мова розмітки гіпертексту.</dd>
-            </dl>
+        <!-- Тег <dd> визначає опис терміна -->
+        <!-- <dd>Мова розмітки гіпертексту.</dd> -->
+    </dl>
 
 
-            <command style="color: red;" disabled>Моя команда</command>
+    <!-- <command style="color: red;" disabled>Моя команда</command> -->
 
-            <!-- Тег <a> з різними атрибутами -->
-            <a href="https://www.example.com" title="Посилання на прикладний сайт" rel="noopener noreferrer"
-                type="text/html" shape="rect" tabindex="1">Перейти на example.com</a>
-
-            <!-- <nav class="main-nav">
+    <!-- Тег <a> з різними атрибутами -->
+    <!-- <a href="https://www.example.com" title="Посилання на прикладний сайт" rel="noopener noreferrer" type="text/html" -->
+    <!-- shape="rect" tabindex="1">Перейти на example.com</a> -->
+    <!--  -->
+    <!-- <nav class="main-nav">
         <ul>
             <li><a href="#">Головна</a></li>
             <li><a href="#">Про нас</a></li>
@@ -166,26 +548,26 @@
     </nav> -->
 
 
-            <!-- Тег <marquee> з атрибутами
+    <!-- Тег <marquee> з атрибутами
     <marquee title="Рухаючийся текст" height="50" scrolldelay="100" hspace="20" class="moving-text">Це текст, який
         рухається вгору!</marquee> -->
 
-            <!-- Тег <nobr> з атрибутом id -->
-            <nobr id="noBreakingText">Цей текст не розбивається на рядки</nobr>
+    <!-- Тег <nobr> з атрибутом id -->
+    <!-- <nobr id="noBreakingText">Цей текст не розбивається на рядки</nobr> -->
 
-            <!-- <main id="mainContent">
+    <!-- <main id="mainContent">
         <h1>Головний зміст сторінки</h1>
         <p>Це основний вміст вашої веб-сторінки.</p>
     </main> -->
 
-            <!-- <div id="header">
+    <!-- <div id="header">
         <h1>Poem Page</h1>
     </div>
     <div id="main-content">
         <p>Це основний вміст.</p>
     </div> -->
 
-            <!-- <div class="parent">
+    <!-- <div class="parent">
         <p>Це дочірній елемент 1</p>
         <p>Це дочірній елемент 2</p>
     </div>
@@ -195,7 +577,7 @@
         <p>Це дочірній елемент 4</p>
     </div> -->
 
-            <!-- <div class="container">
+    <!-- <div class="container">
         <p>Це абзац в контейнері.</p>
         <div class="child">
             <p>Це абзац в дочірньому елементі.</p>
@@ -204,20 +586,20 @@
 
     <p data-color="red">Цей абзац має атрибут data-color="red"</p> -->
 
-            <!-- <div data-role="header">Цей блок має атрибут data-role="header"</div> -->
-            <!-- 
+    <!-- <div data-role="header">Цей блок має атрибут data-role="header"</div> -->
+    <!-- 
     <p class="prefix-123">Цей абзац має клас, що починається з "prefix-"</p>
     <p class="prefix-456">Цей абзац має клас, що починається з "prefix-"</p> -->
-            <!-- <p class="contains-word">Цей абзац має клас, що містить слово "word"</p>
+    <!-- <p class="contains-word">Цей абзац має клас, що містить слово "word"</p>
     <p class="word-prefix">Цей абзац має клас, що містить слово "word"</p>
     <p class="other-class">Цей абзац не має класу, що містить слово "word"</p> -->
-            <!-- 
+    <!-- 
     <div class="parent">
         <p>Перший дочірній елемент</p>
         <p>Другий дочірній елемент</p>
         <p>Третій дочірній елемент</p>
     </div> -->
-            <!-- 
+    <!-- 
     <form>
         <label for="username">Ім'я користувача:</label>
         <input type="password" id="password" name="password" enabled>
@@ -228,11 +610,11 @@
         <button type="submit" disabled>Відправити</button>
     </form> -->
 
-            <!-- <div class="empty-example"></div> -->
+    <!-- <div class="empty-example"></div> -->
 
 
 
-            <!-- <div class="parent">
+    <!-- <div class="parent">
         <p>Перший параграф</p>
         <p>Другий параграф</p>
         <span>Перший спан</span>
@@ -240,48 +622,48 @@
         <p>Останній параграф</p>
     </div> -->
 
-            <!-- <p lang="en">This paragraph is in English.</p>
+    <!-- <p lang="en">This paragraph is in English.</p>
     <p lang="fr">Ce paragraphe est en français.</p>
     <p>This paragraph doesn't have a lang attribute.</p> -->
 
-            <!-- 
+    <!-- 
     <p><a href="#">Це посилання стане червоним при натисканні</a></p> -->
-            <!-- <button>Ця кнопка змінить фоновий колір на жовтий при натисканні</button> <br>
+    <!-- <button>Ця кнопка змінить фоновий колір на жовтий при натисканні</button> <br>
 
 
     <div id="block1" class="block">Блок 1</div>
     <div id="block2" class="block">Блок 2</div>
     <div id="block3" class="block">Блок 3</div><br> -->
-            <!--     
+    <!--     
 
     <div id="block4" class="block">Блок 4</div>
     <div id="block5" class="block">Блок 5</div>
     <div id="block6" class="block">Блок 6</div> -->
 
-            <!-- <div class="example">Цей блок має лівий зовнішній відступ.</div>
+    <!-- <div class="example">Цей блок має лівий зовнішній відступ.</div>
     <div class="examplee">Цей блок має лівий зовнішній відступ у відсотках.</div>
     <div class="exampleee">Цей блок має верхній зовнішній відступ.</div>
     <div class="example2">Цей блок має верхній зовнішній відступ відсотків.</div> -->
-            <!-- <div class="box">Цей блок має внутрішній відступ.</div> -->
-            <!-- <div class="box4">Цей блок має тонку межу.</div> -->
-            <!-- <div class="box2">Цей блок має лівий внутрішній відступ.</div> -->
-            <!-- <div class="box5">Цей блок має межу товщиною 2 пікселя.</div> -->
-            <!-- <div class="box3">Цей блок має нижній внутрішній відступ.</div> -->
-            <!-- <div class="box6">Цей блок має тонку верхню межу.</div>
+    <!-- <div class="box">Цей блок має внутрішній відступ.</div> -->
+    <!-- <div class="box4">Цей блок має тонку межу.</div> -->
+    <!-- <div class="box2">Цей блок має лівий внутрішній відступ.</div> -->
+    <!-- <div class="box5">Цей блок має межу товщиною 2 пікселя.</div> -->
+    <!-- <div class="box3">Цей блок має нижній внутрішній відступ.</div> -->
+    <!-- <div class="box6">Цей блок має тонку верхню межу.</div>
     <div class="box7">Цей блок має верхню межу товщиною 4 пікселі.</div>
     <div class="box8">Цей блок має тонку нижню межу.</div>
     <div class="box9">Цей блок має нижню межу товщиною 3 пікселі.</div> -->
-            <!-- <div class="box10">Цей блок має праву межу червоного кольору.</div> -->
-            <!-- <div class="box11">Цей блок має ліву межу синього кольору.</div>
+    <!-- <div class="box10">Цей блок має праву межу червоного кольору.</div> -->
+    <!-- <div class="box11">Цей блок має ліву межу синього кольору.</div>
     <div class="box12">Цей блок має верхню межу зеленого кольору.</div> -->
-            <!-- <div class="box13">Цей блок має нижню межу без стилю.</div> -->
-            <!-- <div class="box14">Цей блок має нижню межу подвійної лінії.</div> -->
-            <!-- <div class="box15">Цей блок має приховану нижню межу.</div> -->
-            <!-- <div class="box16">Цей блок має нижню межу зі стилем groove.</div> -->
-            <!-- <div class="box17">Цей блок має приховану праву межу.</div> -->
-            <!-- <div class="box18">Цей блок має верхню межу подвійної лінії.</div> -->
-            <!-- <div class="box19">Цей блок має приховану верхню межу.</div> -->
-            <!-- <div class="box20">Цей блок має верхню межу зі стилем groove.</div>
+    <!-- <div class="box13">Цей блок має нижню межу без стилю.</div> -->
+    <!-- <div class="box14">Цей блок має нижню межу подвійної лінії.</div> -->
+    <!-- <div class="box15">Цей блок має приховану нижню межу.</div> -->
+    <!-- <div class="box16">Цей блок має нижню межу зі стилем groove.</div> -->
+    <!-- <div class="box17">Цей блок має приховану праву межу.</div> -->
+    <!-- <div class="box18">Цей блок має верхню межу подвійної лінії.</div> -->
+    <!-- <div class="box19">Цей блок має приховану верхню межу.</div> -->
+    <!-- <div class="box20">Цей блок має верхню межу зі стилем groove.</div>
     <div class="box21">Цей блок 1 є інлайновим.</div>
     <div class="box22">Цей блок 2 теж є інлайновим.</div>
     <div class="hidden-box">Цей блок є невидимим через display: none.</div>
@@ -289,24 +671,24 @@
     <div class="cell2">Цей блок 2 також веде себе як ячейка таблиці.</div>
     <div class="inline-table1">Цей блок 1 веде себе як вбудована таблиця.</div>
     <div class="inline-table2">Цей блок 2 також веде себе як вбудована таблиця.</div> -->
-            <!-- <div class="block1">Цей блок 1 веде себе як блочний елемент.</div>
+    <!-- <div class="block1">Цей блок 1 веде себе як блочний елемент.</div>
     <div class="block2">Цей блок 2 також веде себе як блочний елемент.</div> -->
-            <!-- <div class="row-group1">Ця група рядків 1 веде себе як table-row-group.</div>
+    <!-- <div class="row-group1">Ця група рядків 1 веде себе як table-row-group.</div>
     <div class="row-group2">Ця група рядків 2 також веде себе як table-row-group.</div> -->
-            <!-- <div class="static1">Цей елемент 1 розташовується статично.</div>
+    <!-- <div class="static1">Цей елемент 1 розташовується статично.</div>
     <div class="static2">Цей елемент 2 також розташовується статично.</div> -->
-            <!-- <div class="fixed-box">Цей елемент фіксований в верхньому лівому куті екрану.</div> -->
+    <!-- <div class="fixed-box">Цей елемент фіксований в верхньому лівому куті екрану.</div> -->
 
-            <!-- Блок для створення великого контенту для прокрутки сторінки -->
-            <!-- <div style="height: 1000px; background-color: #f0f0f0;"></div> -->
-            <!-- <div class="box23">Цей блок має z-index: auto.</div>
+    <!-- Блок для створення великого контенту для прокрутки сторінки -->
+    <!-- <div style="height: 1000px; background-color: #f0f0f0;"></div> -->
+    <!-- <div class="box23">Цей блок має z-index: auto.</div>
     <div class="box24">Цей блок також має z-index: auto.</div>
     <div class="box25">І цей блок також має z-index: auto.</div> -->
-            <!-- <div class="float-left1">Елемент 1</div>
+    <!-- <div class="float-left1">Елемент 1</div>
     <div class="float-left2">Елемент 2</div>
     <div class="float-left3">Елемент 3</div>
     <div class="float-left4">Елемент 4</div> -->
-            <!-- <div class="no-float">Елемент без float</div>
+    <!-- <div class="no-float">Елемент без float</div>
     <div class="float-left5">Плаваючий елемент 1</div>
     <div class="float-left5">Плаваючий елемент 2</div>
     <div class="clear-none1">Елемент без очищення</div>
@@ -355,11 +737,11 @@
         <p>Текст вирівнюється відповідно до встановленого розміру рядка.</p>
     </div> -->
 
-            <!-- <div class="baseline-example">
+    <!-- <div class="baseline-example">
         <p class="baseline-child">Цей елемент вирівнюється вздовж базової лінії тексту.</p>
         <p>Текст іншого елемента.</p>
     </div> -->
-            <!-- <div class="bottom-example">
+    <!-- <div class="bottom-example">
         <p class="bottom-child">Цей елемент вирівнюється за нижнім краєм.</p>
         <p>Текст іншого елемента.</p>
     </div>
@@ -368,17 +750,17 @@
         <p class="text-top-child">Цей елемент вирівнюється за верхнім краєм тексту.</p>
         <p>Текст іншого елемента.</p>
     </div> -->
-            <!-- 
+    <!-- 
     <div class="visible-overflow">
         <p class="overflow-content">Цей вміст видно поза межами контейнера, оскільки overflow встановлено в visible.</p>
     </div> -->
 
-            <!-- <div class="scroll-overflow">
+    <!-- <div class="scroll-overflow">
         <p class="overflow-content">Цей вміст виходить за межі контейнера, і ви можете прокручувати його за допомогою
             полос прокрутки.</p>
     </div> -->
 
-            <!-- <div class="clipped-element">
+    <!-- <div class="clipped-element">
         <p>Цей текст відображається лише в межах області, вказаної за допомогою clip.</p>
     </div>
 
@@ -398,7 +780,7 @@
     <div class="colored-background">
         <p>Цей елемент має фоновий колір синього кольору.</p>
     </div> -->
-            <!-- <div class="background-with-image">
+    <!-- <div class="background-with-image">
         <p>Цей елемент має фон з зображенням.</p>
     </div>
     <div class="background-position-example">
