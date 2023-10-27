@@ -9,10 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
-            background-color: lightcyan;
-            font-family: Tahoma;
-
-            /* HEX-код для світло-сірого кольору */
+            background-color: lightsteelblue;
+            font-family: cursive;
         }
 
         h1 {
@@ -44,9 +42,26 @@
         </ul>
     </nav>
 
+    <h2>Sound accompaniment</h2>
+    <audio controls autoplay>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio><br><br>
 
     <button>Сlick this button that you agree to keep all information secret</button> <br>
-    <div class="box11">It is necessary</div>
+
+    <form action="/submit" method="post">
+
+        <!-- Использование тега option с атрибутами -->
+        <label for="inf">Information will be interested for you</label>
+        <select id="inf" name="inf" class="custom-select" lang="en">
+            <option value="Secret page" selected lang="en">Main page</option>
+            <option value="Document page" lang="en">Documents</option>
+            <option value="Book page" lang="en">Books </option>
+            <option value="SECRET!!!" lang="en" disabled>Secret (unavailable)</option>
+        </select>
+    </form>
+
     <h3>Secret information:</h3>
 
     <ol title="Це мій нумерований список" type="1" lang="en">
@@ -58,22 +73,22 @@
     </ol>
 
     <div id="block1" class="block">
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
+        <p>meow meow meow meow meow meow meow meow meow
+            meow meow meow meow meow meow meow meow
+            meow meow meow meow</p>
     </div>
     <div id="block2" class="block">
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
+        <p>meow meow meow meow meow meow meow meow meow
+            meow meow meow meow meow meow meow meow
+            meow meow meow meow</p>
     </div>
     <div id="block3" class="block">
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
-        <p>meow meow meow meow meow</p>
-    </div><br>
+        <p>meow meow meow meow meow meow meow meow meow
+            meow meow meow meow meow meow meow meow
+            meow meow meow meow</p>
+    </div>
     <div class="static1">meow meow meow meow meow meow meow meow meow meowmeow meow meow meow<br>
-        meow meow meow meow meow meowmeow meow meow<br> meow meow meow meow meow meow meow</div>
+        meow meow meow meow meow meowmeow meow meow<br> meow meow meow meow meow meow meow</div><br>
     <div class="static2">meow meow meow meow meow meow meow meow meow meowmeow meow meow meow<br>
         meow meow meow meow meow meowmeow meow meow<br> meow meow meow meow meow meow meow</div>
     <div id="header">

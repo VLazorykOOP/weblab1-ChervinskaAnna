@@ -323,16 +323,22 @@ table {
 
  /* Відступи для першого блоку */
  #block1 {
+     width: 200px;
+     height: 210px;
      margin: 10px;
  }
 
  /* Відступи для другого блоку */
  #block2 {
+     width: 200px;
+     height: 210px;
      margin: 20px;
  }
 
  /* Відступи для третього блоку */
  #block3 {
+     width: 200px;
+     height: 210px;
      margin: 15px 10px;
  }
 
@@ -345,17 +351,23 @@ table {
 
  /* Відступи для першого блоку в 10% відносно батьківського елемента */
  #block4 {
+     width: 200px;
+     height: 280px;
      margin: 5%;
  }
 
  /* Відступи для другого блоку в 20% відносно батьківського елемента */
  #block5 {
+     width: 200px;
+     height: 280px;
      margin: 10%;
  }
 
  /* Відступи для третього блоку в 15% по вертикалі і 10% по горизонталі відносно батьківського елемента */
  #block6 {
-     margin: 7% 8%;
+     width: 200px;
+     height: 280px;
+     margin: 3% 4%;
  }
 
  /* Стилі для елемента з класом example */
@@ -676,7 +688,7 @@ table {
      /* Вирівнювання до лівого краю */
      width: 230px;
      height: 180px;
-     background-color: lightskyblue;
+     background-color: lightslategrey;
      margin-right: 10px;
      /* Додатковий зазор справа для інших елементів */
  }
@@ -686,7 +698,7 @@ table {
      /* Вирівнювання до лівого краю */
      width: 230px;
      height: 180px;
-     background-color: lightsalmon;
+     background-color: lightslategrey;
      margin-right: 10px;
      /* Додатковий зазор справа для інших елементів */
  }
@@ -696,7 +708,7 @@ table {
      /* Вирівнювання до лівого краю */
      width: 230px;
      height: 180px;
-     background-color: lightseagreen;
+     background-color: lightslategrey;
      margin-right: 10px;
      /* Додатковий зазор справа для інших елементів */
  }

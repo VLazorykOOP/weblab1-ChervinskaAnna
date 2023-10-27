@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
-            background-color: lightpink;
-            /* HEX-код для світло-сірого кольору */
+            background-color: lightgray;
+            font-family: cursive;
         }
     </style>
 </head>
@@ -36,15 +36,42 @@
 
         </ul>
     </nav>
+    <h2>Sound accompaniment</h2>
+    <audio controls autoplay>
+        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <form action="/submit" method="post">
 
-    <p><abbr title="WANTED!!">Dangerous criminal:</abbr></p>
+        <label for="inf">What kind of information will be interested for you</label>
+        <select id="inf" name="inf" class="custom-select" style="width: 200px;" lang="en">
+            <optgroup label="Secret page" class="optgroup-style">
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+            </optgroup>
+            <optgroup label="Document page" class="optgroup-style">
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+            </optgroup>
+            <optgroup label="Book page" class="optgroup-style">
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+                <option value="meow">meow meow meow </option>
+            </optgroup>
+        </select>
+
+    </form>
+
+    <p><abbr title="Dangerous!!">Dangerous criminal:</abbr></p>
     <p dir="ltr">Nickname:Mr Cat </p>
     <p style="color: RED; font-size: 16px;">WANTED!!</p>
     <img src="download.jpg" alt="Mr Cat" width="170" height="200">
 
     <div class="box10">
         <h3>We know that he wrote such books:</h3>
-    </div>
+    </div> <br>
 
     <ul>
         <!-- Тег <li> з атрибутом id -->
@@ -55,21 +82,21 @@
     </ul>
 
     <div id="block4" class="block">
-        <img src="img/halereya_kotiv_01.jpg" alt="Mr Cat" width="100" height="130">
+        <img src="img/halereya_kotiv_01.jpg" alt="Mr Cat" width="170" height="250">
     </div>
     <div id="block5" class="block">
-        <img src="img/59630_118955.jpg" alt="Mr Cat" width="100" height="130">
+        <img src="img/59630_118955.jpg" alt="Mr Cat" width="170" height="250">
     </div>
     <div id="block6" class="block">
-        <img src="img/zec8xbthcdyi85p7lm4tovmfykl7l237.webp" alt="Mr Cat" width="100" height="130">
+        <img src="img/zec8xbthcdyi85p7lm4tovmfykl7l237.webp" alt="Mr Cat" width="170" height="250">
     </div>
-    <p class="prefix-123">blue book decription </p>
-    <div class="exampleee">blue book decription<br>
+    <p class="prefix-123">Blue book decription: </p>
+    <div class="exampleee">
         meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
         meow meow meow<br>
         meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow<br>
         meow meow meow meow meow meow meow meow </div>
-    <p class="bla-123">black book decription: </p>
+    <p class="bla-123">Black book decription: </p>
     <div class="examplee">
         meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow
         meow meow meow<br>
