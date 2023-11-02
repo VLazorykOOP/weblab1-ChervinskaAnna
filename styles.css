@@ -998,3 +998,7 @@ table {
      color: #ffffff;
      /* Колір тексту - білий */
  }
+
+ .click {
+     border-color: black;
+ }
