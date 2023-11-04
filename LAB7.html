@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Lab №7 </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: 'Lucida Sans Unicode';
+            font-family: cursive;
+        }
+
+        h1 {
+            color: darkorchid;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 200px;
+            height: 150px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/myscript.js"></script>
+</head>
+
+<body onload="handleLoad()" onunload="handleUnload()" onafterprint="handleAfterPrint()"
+    onbeforeprint="handleBeforePrint()" onbeforeonload="handleBeforeOnload()">
+    <div class="fixed-box"> Only for cats!!</div>
+    <div id="header">
+        <h1>Lab 7</h1>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="secret.html">SECRET PAGE</a></li>
+            <li><a href="books.html"> BOOKS PAGE</a></li>
+            <li><a href="documents.html">DOCUMENT PAGE</a></li>
+            <li><a href="LAB4.html">LAB4 </a></li>
+            <li><a href="LAB6.html">LAB6</a></li>
+            <li><a href="LAB7.html">LAB7 </a></li>
+            <li><a href="LAB8.html">LAB8</a></li>
+            <li><a href="zvit.html">ZVIT PAGE</a></li> <br>
+        </ul><br>
+    </nav>
+
+    <h1 onclick="handleEvent(this)">Only for cats!!</h1>
+    <b onmouseover="handleEvent(this)" onmouseout="resetStyle(this)">meow meow meow</b> <br>
+    <i ondragstart="handleEvent(this)" ondragend="resetStyle(this)">meow meow meow</i>
+
+    <script>
+        function handleEvent(element) {
+            // Виводимо повідомлення
+            console.log(`Event occurred: ${event.type}`);
+
+            // Змінюємо стильове оформлення
+            element.style.color = "white";
+            element.style.backgroundColor = "blue";
+        }
+
+        function resetStyle(element) {
+            // Виводимо повідомлення
+            console.log(`Event occurred: ${event.type}`);
+
+            // Скидаємо стильове оформлення
+            element.style.color = "";
+            element.style.backgroundColor = "";
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            console.log("onload event triggered");
+        };
+
+        window.onunload = function () {
+            console.log("onunload event triggered");
+        };
+
+        window.onafterprint = function () {
+            console.log("onafterprint event triggered");
+        };
+
+        window.onbeforeprint = function () {
+            console.log("onbeforeprint event triggered");
+        };
+
+        window.onbeforeunload = function () {
+            console.log("onbeforeunload event triggered");
+        };
+
+        window.onblur = function () {
+            console.log("onblur event triggered");
+        };
+
+        window.onerror = function () {
+            console.log("onerror event triggered");
+        };
+
+        window.onfocus = function () {
+            console.log("onfocus event triggered");
+        };
+
+        window.onhashchange = function () {
+            console.log("onhashchange event triggered");
+        };
+
+        window.onmessage = function () {
+            console.log("onmessage event triggered");
+        };
+
+        window.onoffline = function () {
+            console.log("onoffline event triggered");
+        };
+
+        window.ononline = function () {
+            console.log("ononline event triggered");
+        };
+
+        window.onpagehide = function () {
+            console.log("onpagehide event triggered");
+        };
+
+        window.onpageshow = function () {
+            console.log("onpageshow event triggered");
+        };
+
+        window.onpopstate = function () {
+            console.log("onpopstate event triggered");
+        };
+
+        window.onredo = function () {
+            console.log("onredo event triggered");
+        };
+
+        window.onresize = function () {
+            console.log("onresize event triggered");
+        };
+
+        window.onstorage = function () {
+            console.log("onstorage event triggered");
+        };
+
+        window.onundo = function () {
+            console.log("onundo event triggered");
+        };
+    </script>
+
+    <form>
+        <textarea id="historyTextArea" rows="10" cols="50" readonly></textarea>
+        <br>
+        <button type="button" onclick="runTask()">Run Task</button>
+    </form>
+
+    <script>
+        // Масив для зберігання історії звернень
+        var historyArray = [];
+
+        // Функція для додавання запису в історію
+        function addToHistory(message) {
+            // Отримуємо поточну дату та час
+            var currentDate = new Date();
+            var timestamp = currentDate.toLocaleString();
+
+            // Створюємо повідомлення для історії
+            var historyMessage = timestamp + ": " + message;
+
+            // Додаємо повідомлення до масиву історії
+            historyArray.push(historyMessage);
+
+            // Оновлюємо текстове поле історії
+            document.getElementById("historyTextArea").value = historyArray.join("\n");
+        }
+
+        // Функція, яка буде викликана при натисканні кнопки
+        function runTask() {
+            // Можете замінити на ваш JavaScript код або alert або console.log
+            addToHistory("Завдання виконано!");
+
+            // Тут ви можете додати інші відомості чи функції, які вам потрібні
+        }
+    </script>
+
+    <h2 ondblclick="handleEvent(this)">meow meow meow</h2>
+    <div class="image-container">
+        <img src="img/images.jpg" alt="Image 1" class="image" id="image1" onmouseover="handleMouseOver(1)"
+            onmouseout="handleMouseOut(1)" onclick="handleClick(1)">
+        <img src="img/kotyky.jpg" alt="Image 2" class="image" id="image2" onmouseover="handleMouseOver(2)"
+            onmouseout="handleMouseOut(2)" onclick="handleClick(2)">
+        <img src="img/licensed-image.jpg" alt="Image 3" class="image" id="image3" onmouseover="handleMouseOver(3)"
+            onmouseout="handleMouseOut(3)" onclick="handleClick(3)">
+    </div>
+
+    <script>
+        function handleMouseOver(imageNumber) {
+            console.log("Mouse over Image " + imageNumber);
+            // Додаткова логіка для події mouseover
+        }
+
+        function handleMouseOut(imageNumber) {
+            console.log("Mouse out Image " + imageNumber);
+            // Додаткова логіка для події mouseout
+        }
+
+        function handleClick(imageNumber) {
+            console.log("Click on Image " + imageNumber);
+            // Додаткова логіка для події click
+        }
+    </script>
+
+    <h2>Search for letters in the text</h2>
+
+    <form id="searchForm">
+        <label for="inputText">enter text</label>
+        <input type="text" id="inputText" name="inputText">
+        <button type="button" onclick="searchText()">meow meow</button>
+    </form>
+
+    <div id="result">
+    </div>
+
+    <script>
+        function searchText() {
+            var inputText = document.getElementById('inputText').value;
+
+            var regex = /[ко]/gi;
+
+            var matches = inputText.match(regex);
+
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Found letters: ' + (matches ? matches.join(', ') : 'there are not');
+        }
+    </script>
+
+
+    <h2>Meowww Task</h2>
+
+    <form>
+        <button type="button" onclick="arrayTask()">Array Task</button>
+        <br>
+        <textarea id="resultTextArea" rows="4" cols="50" readonly></textarea>
+    </form>
+
+    <script>
+        function arrayTask() {
+            // Заданий одновимірний масив
+            var arrayA = [5, -2, 9, 1, -7, 3, 6];
+
+            // Знаходимо мінімальний елемент та його індекс
+            var minElement = Math.min.apply(null, arrayA);
+            var minElementIndex = arrayA.indexOf(minElement);
+
+            // Виводимо результати у текстове поле форми
+            var resultTextArea = document.getElementById('resultTextArea');
+            resultTextArea.value = 'min element ' + minElement + '\n index: ' + minElementIndex;
+        }
+    </script>
+
+
+</body>
+
+</html>
