@@ -39,11 +39,76 @@
 
         </ul>
     </nav>
-    <h2>Sound accompaniment</h2>
-    <audio controls autoplay>
-        <source src="img/Sofiane Pamart - Noche.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+
+    <!-- Меню -->
+    <form id="mediaMenu">
+        <label for="mediaType">Виберіть тип медіа:</label>
+        <select id="mediaType">
+            <option value="audio">Аудіо</option>
+            <option value="video">Відео</option>
+        </select>
+
+        <label for="mediaSelection">Виберіть медіа:</label>
+        <select id="mediaSelection">
+            <!-- Додайте ваші варіанти медіа-ресурсів тут -->
+            <option value="media1">Медіа 1</option>
+            <option value="media2">Медіа 2</option>
+            <option value="media3">Медіа 3</option>
+        </select>
+
+        <input type="submit" value="Показати">
+    </form>
+
+    <!-- Відображення медіа -->
+    <div id="mediaDisplay">
+        <audio controls style="display: none;">
+            <source src="media1.mp3" type="audio/mpeg">
+            <source src="media1.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <video controls style="display: none; width: 400px; height: 300px;">
+            <source src="media1.mp4" type="video/mp4">
+            <source src="media1.webm" type="video/webm">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+    <script>
+        const mediaMenu = document.getElementById("mediaMenu");
+        const mediaTypeSelect = document.getElementById("mediaType");
+        const mediaSelectionSelect = document.getElementById("mediaSelection");
+        const audioPlayer = document.querySelector("audio");
+        const videoPlayer = document.querySelector("video");
+
+        mediaMenu.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const selectedMediaType = mediaTypeSelect.value;
+            const selectedMediaResource = mediaSelectionSelect.value;
+
+            if (selectedMediaType === "audio") {
+                audioPlayer.style.display = "block";
+                videoPlayer.style.display = "none";
+            } else {
+                audioPlayer.style.display = "none";
+                videoPlayer.style.display = "block";
+            }
+
+            // Змініть шляхи до ваших медіа-ресурсів тут
+            if (selectedMediaResource === "media1") {
+                audioPlayer.src = "img/Sofiane Pamart - Noche.mp3";
+                videoPlayer.src = "img/istockphoto-1366916652-640_adpp_is.mp4";
+            } else if (selectedMediaResource === "media2") {
+                audioPlayer.src = "img/Ludwig Van Beethoven - Fur Elise (Bagatelle In A Minor, Woo 59).mp3";
+                videoPlayer.src = "img/istockphoto-1392197018-640_adpp_is.mp4";
+            } else if (selectedMediaResource === "media3") {
+                audioPlayer.src = "img/Ludwig Van Beethoven - Moonlight Sonata (No. 14) 1st Movement (Adagio Sostenuto).mp3";
+                videoPlayer.src = "img/istockphoto-1426186745-640_adpp_is.mp4";
+            }
+        });
+    </script>
+
     <form action="/submit" method="post">
 
         <label for="inf">What kind of information will be interested for you</label>

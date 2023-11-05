@@ -25,285 +25,77 @@
 <body onload="handleLoad()" onunload="handleUnload()" onafterprint="handleAfterPrint()"
     onbeforeprint="handleBeforePrint()" onbeforeonload="handleBeforeOnload()">
 
-    <!-- onblur -->
-    <input type="text" onblur="handleBlur(this)" placeholder="Blur me">
+    <h1>Медіа-бібліотека фірми</h1>
 
-    <!-- onerror -->
-    <img src="nonexistent-image.jpg" onerror="handleError(this)" alt="Error Image">
+    <!-- Меню -->
+    <form id="mediaMenu">
+        <label for="mediaType">Виберіть тип медіа:</label>
+        <select id="mediaType">
+            <option value="audio">Аудіо</option>
+            <option value="video">Відео</option>
+        </select>
 
-    <!-- onfocus -->
-    <input type="text" onfocus="handleFocus(this)" placeholder="Focus on me">
+        <label for="mediaSelection">Виберіть медіа:</label>
+        <select id="mediaSelection">
+            <!-- Додайте ваші варіанти медіа-ресурсів тут -->
+            <option value="media1">Медіа 1</option>
+            <option value="media2">Медіа 2</option>
+            <option value="media3">Медіа 3</option>
+        </select>
 
-    <!-- onchange -->
-    <select onchange="handleChange(this)">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-    </select>
-
-    <!-- onmessage -->
-    <script>
-        function handleMessage(event) {
-            alert('Received message: ' + event.data);
-        }
-        window.addEventListener('message', handleMessage);
-    </script>
-
-    <!-- onoffline and ononline -->
-    <script>
-        function handleOffline() {
-            alert('You are offline');
-        }
-
-        function handleOnline() {
-            alert('You are online');
-        }
-
-        window.addEventListener('offline', handleOffline);
-        window.addEventListener('online', handleOnline);
-    </script>
-
-    <!-- onpagehide and onpageshow -->
-    <script>
-        window.onpagehide = function () {
-            alert('Page is hidden');
-        };
-
-        window.onpageshow = function () {
-            alert('Page is shown');
-        };
-    </script>
-
-    <!-- onpopstate -->
-    <script>
-        function handlePopState(event) {
-            alert('Popstate event triggered');
-        }
-
-        window.onpopstate = handlePopState;
-
-        function pushState() {
-            history.pushState({ page: 1 }, "title 1", "?page=1");
-        }
-    </script>
-
-    <!-- onredo -->
-    <button onclick="redo()">Redo</button>
-    <script>
-        function redo() {
-            alert('Redo button clicked');
-            history.forward();
-        }
-    </script>
-
-    <!-- onresize -->
-    <script>
-        window.onresize = function () {
-            alert('Window resized');
-        };
-    </script>
-
-    <!-- onstorage -->
-    <script>
-        window.onstorage = function (event) {
-            alert('Storage event: ' + event.key + ' changed from ' + event.oldValue + ' to ' + event.newValue);
-        };
-    </script>
-
-    <!-- onundo -->
-    <button onclick="undo()">Undo</button>
-    <script>
-        function undo() {
-            alert('Undo button clicked');
-            history.back();
-        }
-    </script>
-
-    <!-- onclick -->
-    <button onclick="handleClick()">Click me</button>
-
-    <!-- ondblclick -->
-    <button ondblclick="handleDoubleClick()">Double click me</button>
-
-    <!-- ondrag -->
-    <div id="draggable" draggable="true" ondrag="handleDrag(event)">
-        Drag me
-    </div>
-
-    <!-- ondragend -->
-    <div id="draggable" draggable="true" ondragend="handleDragEnd()">
-        Drag me
-    </div>
-
-    <!-- ondragenter -->
-    <div id="dropzone" ondragenter="handleDragEnter(event)" ondragover="handleDragOver(event)"
-        ondrop="handleDrop(event)">
-        Drop here
-    </div>
-
-    <!-- ondragleave -->
-    <div id="dropzone" ondragleave="handleDragLeave(event)" ondragover="handleDragOver(event)"
-        ondrop="handleDrop(event)">
-        Drop here
-    </div>
-
-    <!-- ondragover -->
-    <div id="dropzone" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
-        Drop here
-    </div>
-
-    <!-- ondragstart -->
-    <div id="draggable" draggable="true" ondragstart="handleDragStart()">
-        Drag me
-    </div>
-
-    <!-- ondrop -->
-    <div id="dropzone" ondrop="handleDrop(event)">
-        Drop here
-    </div>
-
-    <!-- onmousedown -->
-    <div onmousedown="handleMouseDown(event)" style="width: 100px; height: 100px; background-color: lightgreen;">
-        Click and hold me
-    </div>
-
-    <!-- onmousemove -->
-    <div onmousemove="handleMouseMove(event)"
-        style="width: 100px; height: 100px; background-color: lightcoral; position: absolute;">
-        Move mouse over me
-    </div>
-
-    <!-- onmouseout -->
-    <div onmouseout="handleMouseOut()"
-        style="width: 100px; height: 100px; background-color: lightblue; position: absolute;">
-        Mouse out
-    </div>
-
-    <!-- onmouseover -->
-    <div onmouseover="handleMouseOver()"
-        style="width: 100px; height: 100px; background-color: lightsalmon; position: absolute;">
-        Mouse over
-    </div>
-
-    <!-- onmouseup -->
-    <div onmouseup="handleMouseUp()" style="width: 100px; height: 100px; background-color: lightgray;">
-        Mouse up
-    </div>
-
-    <!-- onmousewheel -->
-    <div onmousewheel="handleMouseWheel(event)"
-        style="width: 100px; height: 100px; background-color: lightgoldenrodyellow;">
-        Scroll me
-    </div>
-
-    <!-- onscroll -->
-    <div onscroll="handleScroll()" style="width: 300px; height: 300px; background-color: lightpink; overflow: scroll;">
-        Scrollable content
-    </div>
-    <form>
-        <textarea id="historyTextArea" rows="10" cols="50" readonly></textarea>
-        <br>
-        <button type="button" onclick="runTask()">Run Task</button>
+        <input type="submit" value="Показати">
     </form>
 
-    <script>
-        // Масив для зберігання історії звернень
-        var historyArray = [];
+    <!-- Відображення медіа -->
+    <div id="mediaDisplay">
+        <audio controls style="display: none;">
+            <source src="media1.mp3" type="audio/mpeg">
+            <source src="media1.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
 
-        // Функція для додавання запису в історію
-        function addToHistory(message) {
-            // Отримуємо поточну дату та час
-            var currentDate = new Date();
-            var timestamp = currentDate.toLocaleString();
-
-            // Створюємо повідомлення для історії
-            var historyMessage = timestamp + ": " + message;
-
-            // Додаємо повідомлення до масиву історії
-            historyArray.push(historyMessage);
-
-            // Оновлюємо текстове поле історії
-            document.getElementById("historyTextArea").value = historyArray.join("\n");
-        }
-
-        // Функція, яка буде викликана при натисканні кнопки
-        function runTask() {
-            // Можете замінити на ваш JavaScript код або alert або console.log
-            addToHistory("Завдання виконано!");
-
-            // Тут ви можете додати інші відомості чи функції, які вам потрібні
-        }
-    </script>
+        <video controls style="display: none; width: 400px; height: 300px;">
+            <source src="media1.mp4" type="video/mp4">
+            <source src="media1.webm" type="video/webm">
+            Your browser does not support the video element.
+        </video>
+    </div>
 
     <script>
-        function handleClick() {
-            alert('Button clicked');
-        }
+        const mediaMenu = document.getElementById("mediaMenu");
+        const mediaTypeSelect = document.getElementById("mediaType");
+        const mediaSelectionSelect = document.getElementById("mediaSelection");
+        const audioPlayer = document.querySelector("audio");
+        const videoPlayer = document.querySelector("video");
 
-        function handleDoubleClick() {
-            alert('Button double-clicked');
-        }
-
-        function handleDrag(event) {
-            console.log('Dragging...');
-        }
-
-        function handleDragEnd() {
-            console.log('Drag ended');
-        }
-
-        function handleDragEnter(event) {
-            console.log('Drag entered');
+        mediaMenu.addEventListener("submit", function (event) {
             event.preventDefault();
-        }
 
-        function handleDragLeave(event) {
-            console.log('Drag left');
-            event.preventDefault();
-        }
+            const selectedMediaType = mediaTypeSelect.value;
+            const selectedMediaResource = mediaSelectionSelect.value;
 
-        function handleDragOver(event) {
-            console.log('Dragging over...');
-            event.preventDefault();
-        }
+            if (selectedMediaType === "audio") {
+                audioPlayer.style.display = "block";
+                videoPlayer.style.display = "none";
+            } else {
+                audioPlayer.style.display = "none";
+                videoPlayer.style.display = "block";
+            }
 
-        function handleDragStart() {
-            console.log('Drag started');
-        }
-
-        function handleDrop(event) {
-            console.log('Dropped');
-            event.preventDefault();
-        }
-
-        function handleMouseDown(event) {
-            console.log('Mouse down');
-        }
-
-        function handleMouseMove(event) {
-            console.log('Mouse moved');
-        }
-
-        function handleMouseOut() {
-            console.log('Mouse out');
-        }
-
-        function handleMouseOver() {
-            console.log('Mouse over');
-        }
-
-        function handleMouseUp() {
-            console.log('Mouse up');
-        }
-
-        function handleMouseWheel(event) {
-            console.log('Mouse wheel scrolled');
-            event.preventDefault();
-        }
-
-        function handleScroll() {
-            console.log('Scrolled');
-        }
+            // Змініть шляхи до ваших медіа-ресурсів тут
+            if (selectedMediaResource === "media1") {
+                audioPlayer.src = "audio1.wav";
+                videoPlayer.src = "media1.mp4";
+            } else if (selectedMediaResource === "media2") {
+                audioPlayer.src = "audio2.wav";
+                videoPlayer.src = "media2.mp4";
+            } else if (selectedMediaResource === "media3") {
+                audioPlayer.src = "audio3.wav";
+                videoPlayer.src = "media3.mp4";
+            }
+        });
     </script>
+
 
 </body>
 
